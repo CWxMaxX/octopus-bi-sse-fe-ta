@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Remote Dashboard FE</h1>
+      <h1>Remote Dashboard FE test</h1>
     </>
   );
 }

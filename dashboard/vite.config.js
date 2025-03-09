@@ -16,8 +16,15 @@ export default defineConfig({
   ],
   server: {
     port: 5001,
+    watch: {
+      usePolling: true,
+    },
+    cors: true,
   },
   build: {
-    target: 'esnext',
+    modulePreload: false,
+    target: "esnext",
+    minify: false,
+    cssCodeSplit: false,
   }
 });

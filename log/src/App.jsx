@@ -1,9 +1,12 @@
 import "./App.css";
+import ActivityLogTable from "./components/ActivityLogTable/ActivityLogTable";
+import ActivityLogTimeline from "./components/ActivityLogTimeline/ActivityLogTimeline";
 
 function App() {
   return (
     <>
-      <h1>Remote Log App</h1>
+      <ActivityLogTable />
+      {/* <ActivityLogTimeline/> */}
     </>
   );
 }
