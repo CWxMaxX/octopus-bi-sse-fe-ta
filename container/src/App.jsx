@@ -6,12 +6,13 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
+    <h1>Container</h1>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/log" element={<Log />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }

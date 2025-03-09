@@ -1,16 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "../src/components/ui/provider";
 import Dashboard from "dashboard/Dashboard";
 import Log from "log/Log";
+import App from "./App.jsx";
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/log" element={<Log />} />
-    </Routes>
-  </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Provider>
+    <App />
+  </Provider>
 );
-
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
