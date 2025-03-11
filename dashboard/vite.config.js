@@ -9,8 +9,10 @@ export default defineConfig({
       name: "dashboard",
       filename: "remoteEntry.js",
       exposes: {
-        "./Dashboard": "./src/App.jsx",
         "./CustomDrawer": "./src/components/CustomDrawer/CustomDrawer.jsx",
+        "./StatCard": "./src/components/StatCard/StatCard.jsx",
+        "./DailyActiveUsersPieChart": "./src/components/DailyActiveUsersPieChart/DailyActiveUsersPieChart.jsx",
+        "./UserActivityLineChart": "./src/components/UserActivityLineChart/UserActivityLineChart.jsx",
       },
       shared: ["react", "react-dom", "@chakra-ui/react"],
     }),

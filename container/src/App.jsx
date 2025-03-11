@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "dashboard/Dashboard";
-import Log from "log/Log";
-import CustomDrawer from "dashboard/CustomDrawer"
+import CustomDrawer from "dashboard/CustomDrawer";
 import "./App.css";
-import CommonLayout from "./layout/CommonLayout";
+import CommonLayout from "./layout/CommonLayout/CommonLayout";
+import ActivityLogPage from "./pages/ActivityLogPage/ActivityLogPage";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
 
 function App() {
   return (
     <>
-      <CommonLayout drawer={<CustomDrawer/>}>
-        <h1>Test Content</h1>
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/log" element={<Log />} />
-        </Routes>
-      </BrowserRouter> */}
+      <CommonLayout drawer={<CustomDrawer />}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/log" element={<ActivityLogPage />} />
+          </Routes>
+        </BrowserRouter>
       </CommonLayout>
     </>
   );
