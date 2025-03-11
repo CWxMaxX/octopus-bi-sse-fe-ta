@@ -11,7 +11,7 @@ export default defineConfig({
       exposes: {
         "./Log": "./src/App.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "@chakra-ui/react"],
     }),
   ],
   server: {

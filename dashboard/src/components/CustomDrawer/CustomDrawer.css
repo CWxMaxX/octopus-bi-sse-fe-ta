@@ -1,0 +1,17 @@
+.custom-drawer-container{
+    width: 280px;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.logo-container{
+    padding-left: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-heading{
+    margin-left: 10px;
+}

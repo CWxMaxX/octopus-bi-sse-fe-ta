@@ -10,8 +10,9 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./Dashboard": "./src/App.jsx",
+        "./CustomDrawer": "./src/components/CustomDrawer/CustomDrawer.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "@chakra-ui/react"],
     }),
   ],
   server: {
