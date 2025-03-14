@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
@@ -19,6 +20,7 @@ const readJsonFile = (filename) => {
         return { error: 'Error reading file' };
     }
 };
+app.use(cors());
 
 // Endpoint to get dashboard data
 app.get('/api/dashboard', (req, res) => {
