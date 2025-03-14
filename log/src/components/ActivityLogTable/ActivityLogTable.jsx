@@ -37,7 +37,7 @@ const ActivityLogTable = () => {
       activity: "Downloaded report 'summary.xlsx'",
       performedBy: "JohnDoe",
       time: "30 mins ago",
-        logId: "5",
+      logId: "5",
     },
     {
       username: "JohnDoe",
@@ -77,26 +77,29 @@ const ActivityLogTable = () => {
   ];
 
   return (
-    <Table.Root size="sm">
-      <Table.Header>
-        <Table.Row>
-          <Table.ColumnHeader>Username</Table.ColumnHeader>
-          <Table.ColumnHeader>Activity</Table.ColumnHeader>
-          <Table.ColumnHeader>Performed By</Table.ColumnHeader>
-          <Table.ColumnHeader>Time</Table.ColumnHeader>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {items.map((item) => (
-          <Table.Row key={item.logId}>
-            <Table.Cell>{item.username}</Table.Cell>
-            <Table.Cell>{item.activity}</Table.Cell>
-            <Table.Cell>{item.performedBy}</Table.Cell>
-            <Table.Cell>{item.time}</Table.Cell>
+    <>
+      <div className="activity-log-title-container"><h1>Activity log</h1></div>
+      <Table.Root size="sm">
+        <Table.Header>
+          <Table.Row>
+            <Table.ColumnHeader>Username</Table.ColumnHeader>
+            <Table.ColumnHeader>Activity</Table.ColumnHeader>
+            <Table.ColumnHeader>Performed By</Table.ColumnHeader>
+            <Table.ColumnHeader>Time</Table.ColumnHeader>
           </Table.Row>
-        ))}
-      </Table.Body>
-    </Table.Root>
+        </Table.Header>
+        <Table.Body>
+          {items.map((item) => (
+            <Table.Row key={item.logId}>
+              <Table.Cell>{item.username}</Table.Cell>
+              <Table.Cell>{item.activity}</Table.Cell>
+              <Table.Cell>{item.performedBy}</Table.Cell>
+              <Table.Cell>{item.time}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table.Root>
+    </>
   );
 };
 

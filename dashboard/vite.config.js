@@ -14,7 +14,14 @@ export default defineConfig({
         "./DailyActiveUsersPieChart": "./src/components/DailyActiveUsersPieChart/DailyActiveUsersPieChart.jsx",
         "./UserActivityLineChart": "./src/components/UserActivityLineChart/UserActivityLineChart.jsx",
       },
-      shared: ["react", "react-dom", "@chakra-ui/react"],
+      shared:  {
+        react: { singleton: true, requiredVersion: "^19.0.0" },
+        "react-dom": { singleton: true, requiredVersion: "^19.0.0" },
+        "@chakra-ui/react": { singleton: true, requiredVersion: "^3.12.0"},
+        highcharts: { singleton: true, requiredVersion: "^12.1.2" },
+        "highcharts-react-official": { singleton: true,  requiredVersion: "^3.2.1" },
+        'react-router-dom': { singleton: true, requiredVersion: '^7.3.0' },
+      },
     }),
   ],
   server: {

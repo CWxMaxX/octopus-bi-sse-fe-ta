@@ -11,7 +11,13 @@ export default defineConfig({
       exposes: {
         "./Log": "./src/App.jsx",
       },
-      shared: ["react", "react-dom", "@chakra-ui/react"],
+      shared: {
+        react: { singleton: true, requiredVersion: "^19.0.0" },
+        "react-dom": { singleton: true, requiredVersion: "^19.0.0" },
+        "@chakra-ui/react": { singleton: true, requiredVersion: "^3.12.0" },
+        highcharts: { singleton: true, requiredVersion: "^12.1.2" },
+        "highcharts-react-official": { singleton: true, requiredVersion: "^3.2.1" },
+      },
     }),
   ],
   server: {
@@ -26,5 +32,5 @@ export default defineConfig({
     target: "esnext",
     minify: false,
     cssCodeSplit: false,
-  }
+  },
 });

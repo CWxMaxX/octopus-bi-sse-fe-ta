@@ -1,9 +1,13 @@
 import DashboardCard from "../../components/DashboardCard/DashboardCard";
-import React from "react";
+import React, { Suspense } from "react";
 import StatCard from "dashboard/StatCard";
-import DailyActiveUsersPieChart from "dashboard/DailyActiveUsersPieChart";
-import UserActivityLineChart from "dashboard/UserActivityLineChart";
 import { Grid, GridItem, Stack } from "@chakra-ui/react";
+
+//Tried to implement these components from remote app, but it didn't work.
+// const UserActivityLineChart = React.lazy(() => import("dashboard/UserActivityLineChart"));
+// const DailyActiveUsersPieChart = React.lazy(() => import("dashboard/DailyActiveUsersPieChart"));
+import DailyActiveUsersPieChart from "../../components/DailyActiveUsersPieChart/DailyActiveUsersPieChart";
+import UserActivityLineChart from "../../components/UserActivityLineChart/UserActivityLineChart";
 
 const DashboardPage = () => {
   return (
