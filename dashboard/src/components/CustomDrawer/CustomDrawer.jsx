@@ -44,6 +44,13 @@ const CustomDrawer = () => {
           justifyContent="flex-start"
           onClick={() => handleNavigation("/log")}
         >
+          User Activity Log
+        </Button>
+        <Button
+          variant={selected === "/data-lab" ? "solid" : "ghost"}
+          justifyContent="flex-start"
+          onClick={() => handleNavigation("/data-lab")}
+        >
           Data Lab
         </Button>
         <Button

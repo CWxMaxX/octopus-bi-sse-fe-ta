@@ -13,7 +13,7 @@ import UserActivityLineChart from "../../components/UserActivityLineChart/UserAc
 
 
 const DashboardPage = () => {
-  const counts = useSelector((state) => state.dashboard.statCardData);
+  const dashboardStoreData = useSelector((state) => state.dashboard);
 
   return (
     <>
@@ -21,16 +21,16 @@ const DashboardPage = () => {
         <GridItem colSpan={3}>
           <Stack gap={6}>
             <DashboardCard>
-              <StatCard counts={counts} />
+              <StatCard counts={dashboardStoreData?.statCardData} />
             </DashboardCard>
             <DashboardCard>
-              <UserActivityLineChart />
+              <UserActivityLineChart chartData={dashboardStoreData?.userActivityLineChartData} />
             </DashboardCard>
           </Stack>
         </GridItem>
         <GridItem colSpan={2}>
           <DashboardCard>
-            <DailyActiveUsersPieChart />
+            <DailyActiveUsersPieChart data={dashboardStoreData?.dailyActiveUsersPieChartData} />
           </DashboardCard>
         </GridItem>
       </Grid>

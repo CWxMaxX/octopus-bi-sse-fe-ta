@@ -1,10 +1,10 @@
 import "./App.css";
 import ActivityLogTable from "./components/ActivityLogTable/ActivityLogTable";
 
-function App() {
+function App({logData}) {
   return (
     <>
-      <ActivityLogTable />
+      <ActivityLogTable logData={logData} />
     </>
   );
 }

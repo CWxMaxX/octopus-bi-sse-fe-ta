@@ -4,21 +4,22 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { Grid } from "@chakra-ui/react";
 
-const DailyActiveUsersPieChart = () => {
-  const data={
-    chartData:[
-      { name: "Staff", y: 151 },
-      { name: "Students", y: 200 },
-      { name: "Students", y: 200 },
-      { name: "Other", y: 200 },
-    ],
-    countsByAuthMethod:[
-      { name: "Microsoft", count: 1000 },
-      { name: "Internal", count: 1000 },
-      { name: "Email", count: 1000 },
-    ]
-
-  }
+const DailyActiveUsersPieChart = ({data}) => {
+  //Sample Data structure
+  // const data={
+  //   chartData:[
+  //     { name: "Staff", y: 151 },
+  //     { name: "Students", y: 200 },
+  //     { name: "Students", y: 200 },
+  //     { name: "Other", y: 200 },
+  //   ],
+  //   countsByAuthMethod:[
+  //     { name: "Microsoft", count: 1000 },
+  //     { name: "Internal", count: 1000 },
+  //     { name: "Email", count: 1000 },
+  //   ]
+  // }
+  
   const options = {
     chart: {
       type: "pie",
